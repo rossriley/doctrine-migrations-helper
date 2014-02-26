@@ -18,6 +18,12 @@
         "psr-4": {
             "DoctrineMigrationsHelper\\": "src"
         }
+    },
 
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
     }
+
 }
