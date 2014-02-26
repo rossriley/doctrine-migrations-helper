@@ -30,3 +30,4 @@ The created configuration is available as a public property on the CommandSet so
 
 
 
+All standard CLI tools are setup by default, you can override this by manually setting the `$set->commands` array with your own set.
