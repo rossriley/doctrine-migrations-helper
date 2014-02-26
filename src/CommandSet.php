@@ -4,7 +4,7 @@ namespace DoctrineMigrationsHelper;
 use Doctrine\DBAL\Migrations\Configuration\Configuration;
 use Doctrine\DBAL\Connection;
 
-use Doctrine\DBAL\Migrations\Tools\Console\Command as Command;
+use Doctrine\DBAL\Migrations\Tools\Console\Command;
 
 /**
  * CommandSet Class
