@@ -1,5 +1,5 @@
 {
-    "name": "rossriley/doctrine-migrations-runner",
+    "name": "rossriley/doctrine-migrations-helper",
     "description": "Setup tool to provide configured Doctrine Migration Commands",
     "license": "MIT",
     "authors": [
