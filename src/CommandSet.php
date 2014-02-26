@@ -45,7 +45,7 @@ class CommandSet
     public function getCommands() {
         $commands = [];
         foreach($this->commands as $command) {
-            $class = "Doctrine\DBAL\Migrations\Tools\Console\Command\$commandCommand";
+            $class = "Doctrine\DBAL\Migrations\Tools\Console\Command\\".$command."Command";
             $obj = new $class;
             $obj->setMigrationConfiguration($this->configuration);
             $commands[]=$obj;
