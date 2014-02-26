@@ -4,7 +4,6 @@ namespace DoctrineMigrationsHelper;
 use Doctrine\DBAL\Migrations\Configuration\Configuration;
 use Doctrine\DBAL\Connection;
 
-use Doctrine\DBAL\Migrations\Tools\Console\Command;
 
 /**
  * CommandSet Class
@@ -46,7 +45,7 @@ class CommandSet
     public function getCommands() {
         $commands = [];
         foreach($this->commands as $command) {
-            $class = "Command\\".$command."Command";
+            $class = "Doctrine\DBAL\Migrations\Tools\Console\Command\{$command}Command";
             $obj = new $class;
             $obj->setMigrationConfiguration($this->configuration);
             $commands[]=$obj;
