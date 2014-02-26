@@ -1,0 +1,23 @@
+{
+    "name": "rossriley/doctrine-migrations-runner",
+    "description": "Setup tool to provide configured Doctrine Migration Commands",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ross Riley",
+            "email": "riley.ross@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+
+    "require": {
+        "doctrine/migrations": "~1.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "DoctrineMigrationsHelper\\": "src"
+        }
+
+    }
+}
