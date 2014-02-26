@@ -11,12 +11,14 @@
     "minimum-stability": "dev",
 
     "require": {
-        "doctrine/migrations": "~1.0"
+        "doctrine/migrations"   : "~1.0",
+        "symfony/console"       : "2.*"
     },
 
     "autoload": {
         "psr-4": {
-            "DoctrineMigrationsHelper\\": "src"
+            "DoctrineMigrationsHelper\\": "src",
+            "DoctrineMigrationsHelper\\Tests\\": "tests"
         }
     },
 
