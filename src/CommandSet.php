@@ -46,7 +46,7 @@ class CommandSet
     public function getCommands() {
         $commands = [];
         foreach($this->commands as $command) {
-            $class = "Command\\".$command;
+            $class = "Command\\".$command."Command";
             $obj = new $class;
             $obj->setMigrationConfiguration($this->configuration);
             $commands[]=$obj;
