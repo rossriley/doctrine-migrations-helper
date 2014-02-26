@@ -1,4 +1,32 @@
-doctrine-migrations-runner
-==========================
+## Doctrine Migration Commands Helper
 
-Simple Console Command Provider to allow setting up Doctrine CLI Tools with less Boilerplate and no Config Files 
+This package allows the setting up of the Doctrine CLI Tools with less Boilerplate and no Config Files.
+
+You may want to use this if you prefer to initialise migrations from your own configuration / DI container rather than requiring an xml / yml migrations configuration file.
+
+It depends on DBAL and must be initialised with a valid DriverConnection
+
+#### Usage
+
+
+The set is designed to be passed straight to a Symfony Console Application, usage may be as follows:
+
+    use DoctrineMigrationsHelper\CommandSet;
+
+    $set = new CommandSet($db_connection, $namespace, $directory);
+
+    $console->addCommands($set->getCommands());
+
+
+The created configuration is available as a public property on the CommandSet so it can be manipulated in the same way as a normal Migrations configuration. For example:
+
+
+    use DoctrineMigrationsHelper\CommandSet;
+
+    $set = new CommandSet($db_connection);
+    $set->configuration->setMigrationsNamespace("Example\Namespace");
+
+    $console->addCommands($set->getCommands());
+
+
+
