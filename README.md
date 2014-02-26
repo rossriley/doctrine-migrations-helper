@@ -31,3 +31,9 @@ The created configuration is available as a public property on the CommandSet so
 
 
 All standard CLI tools are setup by default, you can override this by manually setting the `$set->commands` array with your own set.
+
+Additionally if your DI constructs a migrations configuration you can just overwrite the auto created one. For example:
+
+    $set = new CommandSet($container->get("db-connection"));
+    $set->configuration = $container->get("migrations");
+    $console->addCommands($set->getCommands());
