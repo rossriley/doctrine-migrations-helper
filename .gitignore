@@ -1,1 +1,9 @@
-/vendor/
+.DS_*
+vendor/
+docs/
+composer.lock
+composer.phar
+
+# Ignore IDE settings
+/.idea
+/nbproject
