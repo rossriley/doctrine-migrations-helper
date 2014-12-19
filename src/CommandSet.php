@@ -19,7 +19,6 @@ class CommandSet
         "Diff",
         "Execute",
         "Generate",
-        "Latest",
         "Migrate",
         "Status",
         "Version"
